@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+thead {color:green;}
+tbody {color:blue;}
+tfoot {color:red;}
+
+table, th, td {
+  border: 1px solid rgb(179, 49, 49);
+}
+</style>
+</head>
+<body>
+<table>
+<colgroup>
+    <col style="background-color:pink">
+    <col style="background-color:yellow">
+  </colgroup>
+  <caption>Monthly savings</caption> 
+  <thead>
+    <tr>
+      <td>Month</td>
+      <th>Savings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$80</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Sum</td>
+      <td>$180</td>
+    </tr>
+  </tfoot>
+</table>
+
+</body>
+</html>
+
+
+
+<html>
+    <head>
+        <style>
+            thead{color: blue;}
+            tbody{color: brown;}
+            tfoot{color: aqua;}
+            table,th,td{
+                border: 1px;
+            }
+        </style>
+        <table>
+            <colgroup>
+              <col style="background-color: rgb(248, 240, 255);"/>
+              <col style="background-color: antiquewhite;"/>
+
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Amt</th>
+                    <th>year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        hiiii
+                    </td>
+                    <td>56</td>
+                </tr>
+                <tr>
+                    <td>
+                        hiiii
+                    </td>
+                    <td>56</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>finished</td>
+                    <td >amt kaale</td>
+                </tr>
+            </tfoot>
+        </table>
+        <input type="button"/>
+        <input type="checkbox"/>
+    </head>
+</html>
+
+<html>
+    <form>
+        <label for="fname">Fname:</label>
+        <input type="text" name="fname" id="Nanthana"/>
+        <label for="sex">Sex:</label>
+        <input type="radio" name="sex" id="male" value="Male"/>
+        <label for="male">Male</label>
+        <input type="radio" name="sex" id="female" value="female"/>
+        <label for="female" >Female</label><br>
+        <input type="button" value="submittt"/>
+
+    </form>
+    <form>
+        <label for="pets">Pets</label>
+        <select id="pets">
+            <optgroup label="mamals">
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+        </optgroup>
+        <optgroup label="rtr">
+            <option value="hen">Hen</option>
+        </optgroup>
+           
+        </select>
+    </form>
+   
+        <label for="choice" >Choose</label>
+        <input list="choicess" id="choice" name="choice">
+        <datalist id="choices">
+            <option value="gg">
+            <option value="gg">
+            <option value="hkg">
+            <option value="gkg">
+        </datalist>
+    
+    <label for="country-choice">Choose a country:</label>
+<input list="country-options"id="country-choice" name="country-choice">
+<datalist id="country-options">
+    <option value="Australia">
+    <option value="Austria">
+    <option value="America">
+    <option value="Nepal">
+</datalist>
+
+</html>
+<br>
+<br>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h2>Temperature Converter</h2>
+
+    <!-- Celsius to Fahrenheit -->
+    <label for="celsius">Celsius:</label>
+    <input type="number" id="celsius" placeholder="Enter Celsius">
+    <button onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+    <p id="fahrenheitResult"></p>
+
+    <br><br>
+
+    <!-- Fahrenheit to Celsius -->
+    <label for="fahrenheit">Fahrenheit:</label>
+    <input type="number" id="fahrenheit" placeholder="Enter Fahrenheit">
+    <button onclick="convertToCelsius()">Convert to Celsius</button>
+    <p id="celsiusResult"></p>
+
+    <script>
+        // Function to convert Celsius to Fahrenheit
+        function convertToFahrenheit() {
+            var celsius = document.getElementById("celsius").value;
+            if (celsius !== "") {
+                var fahrenheit = (celsius * 9/5) + 32;
+                document.getElementById("fahrenheitResult").innerHTML = celsius + "°C is " + fahrenheit + "°F";
+            } else {
+                document.getElementById("fahrenheitResult").innerHTML = "Please enter a valid Celsius value.";
+            }
+        }
+
+        // Function to convert Fahrenheit to Celsius
+        function convertToCelsius() {
+            var fahrenheit = document.getElementById("fahrenheit").value;
+            if (fahrenheit !== "") {
+                var celsius = (fahrenheit - 32) * 5/9;
+                document.getElementById("celsiusResult").innerHTML = fahrenheit + "°F is " + celsius.toFixed(2) + "°C";
+            } else {
+                document.getElementById("celsiusResult").innerHTML = "Please enter a valid Fahrenheit value.";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        input[type="button"] {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            margin: 5px;
+        }
+        input[type="text"] {
+            width: 215px;
+            height: 50px;
+            font-size: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Calculator</h2>
+    
+    <!-- Calculator Display -->
+    <input type="text" id="display" disabled>
+    
+    <br>
+    
+    <!-- Calculator Buttons -->
+    <input type="button" value="1" onclick="appendToDisplay(1)">
+    <input type="button" value="2" onclick="appendToDisplay(2)">
+    <input type="button" value="3" onclick="appendToDisplay(3)">
+    <input type="button" value="+" onclick="appendToDisplay('+')">
+    <br>
+    <input type="button" value="4" onclick="appendToDisplay(4)">
+    <input type="button" value="5" onclick="appendToDisplay(5)">
+    <input type="button" value="6" onclick="appendToDisplay(6)">
+    <input type="button" value="-" onclick="appendToDisplay('-')">
+    <br>
+    <input type="button" value="7" onclick="appendToDisplay(7)">
+    <input type="button" value="8" onclick="appendToDisplay(8)">
+    <input type="button" value="9" onclick="appendToDisplay(9)">
+    <input type="button" value="*" onclick="appendToDisplay('*')">
+    <br>
+    <input type="button" value="0" onclick="appendToDisplay(0)">
+    <input type="button" value="C" onclick="clearDisplay()">
+    <input type="button" value="=" onclick="calculateResult()">
+    <input type="button" value="/" onclick="appendToDisplay('/')">
+    
+    <script>
+        let display = document.getElementById("display");
+        let currentInput = "";
+        
+        // Append number or operator to the display
+        function appendToDisplay(value) {
+            currentInput += value;
+            display.value = currentInput;
+        }
+        
+        // Clear the display
+        function clearDisplay() {
+            currentInput = "";
+            display.value = currentInput;
+        }
+        
+        // Calculate the result
+        function calculateResult() {
+            try {
+                currentInput = eval(currentInput).toString();
+                display.value = currentInput;
+            } catch (error) {
+                display.value = "Error";
+                currentInput = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Duplicates</title>
+</head>
+<body>
+
+    <h2>Remove Duplicates from Array</h2>
+
+    <script>
+        // Function to remove duplicates ignoring case
+        function removeDuplicates(arr) {
+            return Array.from(new Set(arr.map(item => item.toLowerCase())));
+        }
+
+        // Example array with duplicates
+        let arrayWithDuplicates = ["Apple", "banana", "apple", "Banana", "Cherry", "cherry"];
+
+        // Remove duplicates and display result
+        console.log(removeDuplicates(arrayWithDuplicates));
+    </script>
+
+</body>
+</html>
+
+
